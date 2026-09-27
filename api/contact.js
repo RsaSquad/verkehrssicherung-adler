@@ -65,7 +65,7 @@ export default async function handler(req, res) {
 
         if (!response.ok) {
             console.error('Resend Error:', data);
-            return res.status(500).json({ error: 'E-Mail konnte nicht gesendet werden.' });
+            return res.status(500).json({ error: 'E-Mail konnte nicht gesendet werden.', details: data });
         }
 
         // Bestätigungs-E-Mail an den Absender
