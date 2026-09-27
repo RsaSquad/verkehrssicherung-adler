@@ -105,8 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { id: 'ansprechpartner', type: 'text' },
                 { id: 'firma', type: 'text' },
                 { id: 'telefon', type: 'text' },
-                { id: 'email', type: 'email' },
-                { id: 'anliegen', type: 'select' }
+                { id: 'email', type: 'email' }
             ];
 
             requiredFields.forEach(field => {
