@@ -278,6 +278,12 @@ ul {
     font-weight: 500;
 }
 
+.logo__img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
 /* Nav */
 .nav__list {
     display: flex;
