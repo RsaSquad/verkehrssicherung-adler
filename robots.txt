@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.verkehrssicherung.de/sitemap.xml
+Sitemap: https://www.verkehrssicherung-adler.de/sitemap.xml
