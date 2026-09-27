@@ -136,10 +136,45 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (isValid) {
-                // Hide form fields, show success
-                const formElements = form.querySelectorAll('.form-row, .form-group, .contact-form__title, .btn--full');
-                formElements.forEach(el => el.style.display = 'none');
-                formSuccess.classList.add('show');
+                // Absende-Button deaktivieren
+                const submitBtn = document.getElementById('submitBtn');
+                const btnText = submitBtn.querySelector('span');
+                const originalText = btnText.textContent;
+                submitBtn.disabled = true;
+                btnText.textContent = 'Wird gesendet...';
+
+                // Formulardaten sammeln
+                const formData = {
+                    ansprechpartner: document.getElementById('ansprechpartner').value.trim(),
+                    firma: document.getElementById('firma').value.trim(),
+                    telefon: document.getElementById('telefon').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    nachricht: document.getElementById('nachricht').value.trim()
+                };
+
+                // An API senden
+                fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        const formElements = form.querySelectorAll('.form-row, .form-group, .contact-form__title, .btn--full');
+                        formElements.forEach(el => el.style.display = 'none');
+                        formSuccess.classList.add('show');
+                    } else {
+                        alert('Fehler beim Senden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns telefonisch.');
+                        submitBtn.disabled = false;
+                        btnText.textContent = originalText;
+                    }
+                })
+                .catch(() => {
+                    alert('Verbindungsfehler. Bitte versuchen Sie es erneut oder kontaktieren Sie uns telefonisch.');
+                    submitBtn.disabled = false;
+                    btnText.textContent = originalText;
+                });
             } else {
                 // Scroll to first error
                 const firstError = form.querySelector('.form-group.error');
