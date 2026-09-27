@@ -24,7 +24,7 @@ export default async function handler(req, res) {
                 subject: `Neue Anfrage von ${firma} – ${ansprechpartner}`,
                 html: `
                     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-                        <div style="background: #ffffff; padding: 32px; border-radius: 12px 12px 0 0; border: 1px solid #e2e8f0; border-bottom: none; text-align: center;">
+                        <div style="background: #e8f4fc; padding: 32px; border-radius: 12px 12px 0 0; border: 1px solid #e2e8f0; border-bottom: none; text-align: center;">
                             <img src="https://www.verkehrssicherung-adler.de/logo-dark.png" alt="Adler & Sohn" style="height: 70px; width: auto; margin: 0 auto 20px auto; display: block;">
                             <h1 style="margin: 0; font-size: 20px; color: #0B1D3A;">Neue Kontaktanfrage</h1>
                             <p style="margin: 8px 0 0; color: #64748b;">über verkehrssicherung-adler.de</p>
@@ -82,7 +82,7 @@ export default async function handler(req, res) {
                 subject: 'Ihre Anfrage ist bei uns eingegangen – Adler & Sohn',
                 html: `
                     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-                        <div style="background: #ffffff; padding: 32px; border-radius: 12px 12px 0 0; border: 1px solid #e2e8f0; border-bottom: none; text-align: center;">
+                        <div style="background: #e8f4fc; padding: 32px; border-radius: 12px 12px 0 0; border: 1px solid #e2e8f0; border-bottom: none; text-align: center;">
                             <img src="https://www.verkehrssicherung-adler.de/logo-dark.png" alt="Adler & Sohn" style="height: 70px; width: auto; margin: 0 auto 20px auto; display: block;">
                             <h1 style="margin: 0; font-size: 22px; color: #0B1D3A;">Vielen Dank für Ihre Anfrage!</h1>
                         </div>
