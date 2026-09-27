@@ -25,6 +25,7 @@ export default async function handler(req, res) {
                 html: `
                     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
                         <div style="background: #0B1D3A; color: white; padding: 24px; border-radius: 12px 12px 0 0;">
+                            <img src="https://www.verkehrssicherung-adler.de/logo.png" alt="Adler & Sohn" style="height: 40px; width: auto; margin-bottom: 16px; display: block;">
                             <h1 style="margin: 0; font-size: 20px;">Neue Kontaktanfrage</h1>
                             <p style="margin: 8px 0 0; opacity: 0.8;">über verkehrssicherung-adler.de</p>
                         </div>
@@ -82,6 +83,7 @@ export default async function handler(req, res) {
                 html: `
                     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
                         <div style="background: #0B1D3A; color: white; padding: 32px; border-radius: 12px 12px 0 0; text-align: center;">
+                            <img src="https://www.verkehrssicherung-adler.de/logo.png" alt="Adler & Sohn" style="height: 50px; width: auto; margin: 0 auto 20px auto; display: block;">
                             <h1 style="margin: 0; font-size: 22px;">Vielen Dank für Ihre Anfrage!</h1>
                         </div>
                         <div style="background: #ffffff; padding: 32px; border: 1px solid #e2e8f0;">
