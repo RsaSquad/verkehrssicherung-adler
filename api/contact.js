@@ -19,7 +19,7 @@ export default async function handler(req, res) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                from: 'Kontaktformular <onboarding@resend.dev>',
+                from: 'Kontaktformular <info@verkehrssicherung-adler.de>',
                 to: ['info@verkehrssicherung-adler.de'],
                 subject: `Neue Anfrage von ${firma} – ${ansprechpartner}`,
                 html: `
@@ -65,7 +65,7 @@ export default async function handler(req, res) {
 
         if (!response.ok) {
             console.error('Resend Error:', data);
-            return res.status(500).json({ error: 'E-Mail konnte nicht gesendet werden.', details: data });
+            return res.status(500).json({ error: 'E-Mail konnte nicht gesendet werden.' });
         }
 
         // Bestätigungs-E-Mail an den Absender
@@ -76,7 +76,7 @@ export default async function handler(req, res) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                from: 'Adler & Sohn – Verkehrssicherung <onboarding@resend.dev>',
+                from: 'Adler & Sohn – Verkehrssicherung <info@verkehrssicherung-adler.de>',
                 to: [email],
                 subject: 'Ihre Anfrage ist bei uns eingegangen – Adler & Sohn',
                 html: `
