@@ -1224,7 +1224,13 @@ a.service-card:hover {
 
     /* Hero */
     .hero__content {
-        padding: 140px 0 100px;
+        padding: 140px 16px 100px;
+        text-align: center;
+    }
+
+    .hero__subtitle {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero__scroll {
@@ -1233,10 +1239,12 @@ a.service-card:hover {
 
     .hero__actions {
         flex-direction: column;
+        align-items: center;
     }
 
     .hero__actions .btn {
         justify-content: center;
+        width: 100%;
     }
 
     /* Services */
