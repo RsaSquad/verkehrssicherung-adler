@@ -1262,7 +1262,7 @@ a.footer__contact-item:hover {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(11, 29, 58, 0.98);
+        background: var(--primary);
         backdrop-filter: blur(20px);
         display: flex;
         align-items: center;
@@ -1271,6 +1271,7 @@ a.footer__contact-item:hover {
         visibility: hidden;
         transition: all 0.4s var(--ease-out);
         z-index: 1002;
+        padding: 80px 24px;
     }
 
     .nav.open {
@@ -1290,8 +1291,9 @@ a.footer__contact-item:hover {
     }
 
     /* Topbar mobile */
-    .topbar__item:last-child {
-        display: none;
+    .topbar__inner {
+        gap: 16px;
+        font-size: 0.75rem;
     }
 
     /* Hero */
