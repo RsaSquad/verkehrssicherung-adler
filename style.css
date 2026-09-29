@@ -217,11 +217,50 @@ ul {
 }
 
 /* ═══════════════════════════════════════
+   TOP CONTACT BAR
+   ═══════════════════════════════════════ */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    background: var(--accent);
+    padding: 8px 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.topbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.topbar__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--white);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.topbar__item:hover {
+    opacity: 0.85;
+}
+
+.topbar__item svg {
+    flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════
    HEADER
    ═══════════════════════════════════════ */
 .header {
     position: fixed;
-    top: 0;
+    top: 36px;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -1222,9 +1261,14 @@ a.service-card:hover {
         padding: 12px 32px;
     }
 
+    /* Topbar mobile */
+    .topbar__item:last-child {
+        display: none;
+    }
+
     /* Hero */
     .hero__content {
-        padding: 140px 16px 100px;
+        padding: 160px 16px 100px;
         text-align: center;
     }
 
