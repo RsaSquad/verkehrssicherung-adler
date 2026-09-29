@@ -1095,6 +1095,32 @@ a.service-card:hover {
     max-width: 320px;
 }
 
+.footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.footer__contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a.footer__contact-item:hover {
+    color: var(--accent-light);
+}
+
+.footer__contact-item svg {
+    flex-shrink: 0;
+    color: var(--accent);
+}
+
 .footer__links h4 {
     color: var(--white);
     font-size: 0.9rem;
