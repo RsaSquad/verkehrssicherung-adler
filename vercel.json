@@ -1,0 +1,15 @@
+{
+    "redirects": [
+        {
+            "source": "/:path*",
+            "has": [{ "type": "host", "value": "verkehrssicherung-adler.de" }],
+            "destination": "https://www.verkehrssicherung-adler.de/:path*",
+            "permanent": true
+        },
+        {
+            "source": "/:slug((?!api$)[a-z0-9\\-]+)",
+            "destination": "/:slug/",
+            "permanent": true
+        }
+    ]
+}
