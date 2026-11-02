@@ -4,9 +4,37 @@
    Wird nach den seitenspezifischen Stylesheets geladen.
    ═══════════════════════════════════════════════════════════ */
 
-/* Breadcrumb sitzt unter roter Leiste (36px) + Header */
+/* Header auf Unterseiten immer dunkel (auf der Startseite ist er oben transparent über dem Titelbild) */
+.header,
+.header.scrolled {
+    padding: 12px 0;
+    background: rgba(11, 29, 58, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Breadcrumb dunkel, damit Header, Navigation und Titelbild eine Einheit bilden */
 .breadcrumb {
     padding-top: 120px;
+    background: var(--primary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.breadcrumb__list a {
+    color: #f87171;
+}
+
+.breadcrumb__list a:hover {
+    color: #ffffff;
+}
+
+.breadcrumb__list li:not(:last-child)::after {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.breadcrumb__list li[aria-current="page"] {
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .breadcrumb__list {
@@ -102,5 +130,33 @@
     .section__title {
         overflow-wrap: break-word;
         hyphens: auto;
+    }
+}
+
+/* Impressum: Logo und Zurück-Button nebeneinander */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+@media (max-width: 480px) {
+    .nav-bar .btn--sm {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .nav-bar .btn {
+        padding: 8px 12px !important;
+        font-size: 0.75rem !important;
+        white-space: nowrap;
+    }
+
+    .header .nav-bar .logo__img {
+        height: 44px !important;
+        width: auto;
     }
 }
