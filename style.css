@@ -1461,3 +1461,23 @@ a.footer__contact-item:hover {
     color: var(--gray-600);
     line-height: 1.85;
 }
+
+/* Sehr schmale Handys: Telefon + E-Mail in der roten Leiste passen in eine Zeile */
+@media (max-width: 420px) {
+    .topbar__inner {
+        gap: 10px;
+        font-size: 0.68rem;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    .topbar__item {
+        gap: 4px;
+    }
+
+    .topbar__item svg {
+        width: 13px;
+        height: 13px;
+    }
+}
